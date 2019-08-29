@@ -1,0 +1,89 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-image: linear-gradient(#c33764,#1d2671);
+    background-repeat: no-repeat;
+    height: 100%;
+    background-attachment: fixed;
+
+}
+
+#crystal_1{
+    background-image: url(../Images/Blue\ Heart\ Crystal.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border: none;
+    border-radius: 6px;
+    height:150px;
+    width: 150px;
+    
+}
+
+#crystal_1:hover{
+    opacity:.75;
+}
+
+#crystal_2{
+    background-image: url(../Images/Green\ Heart\ Crystal.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border: none;
+    border-radius: 6px;
+    height:150px;
+    width: 150px;
+}
+
+#crystal_2:hover{
+    opacity:.75;
+
+}    
+
+
+#crystal_3{
+    background-image: url(../Images/Purple\ Heart\ Crystal.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border: none;
+    border-radius: 6px;
+    height:150px;
+    width: 150px;
+  
+}
+
+#crystal_3:hover{
+    opacity:.75;
+
+}    
+
+
+#crystal_4{
+    background-image: url(../Images/Light\ Blue\ Crystal.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border: none;
+    border-radius: 6px;
+    height:150px;
+    width: 150px;
+    
+}
+
+#crystal_4:hover{
+    opacity:.75;
+
+}
+
+.win {
+    background: #1d2671;
+    color:white;
+    text-align: center;
+
+}
+
+.lose{
+    background: #1d2671;
+    color:white;
+    text-align: center;
+
+}
