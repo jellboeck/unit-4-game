@@ -87,3 +87,10 @@ body {
     text-align: center;
 
 }
+
+#ran_number {
+    font-size: 50px;
+    background: white;
+    color: #c33764;
+
+}
