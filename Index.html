@@ -7,48 +7,82 @@
 <head>
     <meta charset="UTF-8">
     <title>Crystal Collector Game</title>
-    <link rel="stylesheet" href="Assets/CSS/style.css">
+    <link rel="stylesheet" href="Assets/CSS/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="Assets/CSS/style.css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Carter+One|Kaushan+Script|Montserrat|Roboto+Condensed&display=swap"
+        rel="stylesheet" crossorigin="anonymous">
+
 
 </head>
 
 <body>
 
-    <!-- <div class="jumbotron">
-        <h1 class="display-4">Crystal Collector Game</h1>
+    <div class="jumbotron">
+        <h1 class="display-4" id="welcome">Welcome to Crystal Collector</h1>
         <p class="lead"></p>
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <p id="instructions"> Instructions: Click the Start button to begin the game. You will be given a magic
+            number. Click on the crystals below to add points to your score. If your score matches the magic number then
+            you win! Go over and you lose. The crystal values change each game.</p>
         <p class="lead">
-            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+            <a class="btn btn-primary btn-lg" role="button" id="start_game">Start the Game!</a>
         </p>
-    </div> -->
+    </div>
 
-    <h3>Random Number</h3>
-    <div id="ran_number">Random Number</div>
+    <div id="message">   </div>
 
+    <div class="container">
+        <div class="row" >
+            <div class="col-6"id="magic_number">
+                <h3>Magic Number:</h3>
+                <div id="ran_number"></div>
+            </div>
+          
+        </div>
+    </div>
 
+    <div class="container">
+        <div class="row" id="crystals">
+            <div class="col-3">
+                <button id="crystal_1"></button>
+            </div>
 
-    <button id="crystal_1"></button>
-    <button id="crystal_2"></button>
-    <button id="crystal_3"></button>
-    <button id="crystal_4"></button>
+            <div class="col-3">
+                <button id="crystal_2"></button>
+            </div>
+            <div class="col-3">
+                <button id="crystal_3"></button>
+            </div>
+            <div class="col-3">
+                <button id="crystal_4"></button>
+            </div>
 
+        </div>
+    </div>
 
-    <div id="user_score">User Score</div>
+    <div class="container">
+        <div class="row">
+            <div class=col-6 id="your_score">
+                <h3>Your Score:</h3>
+                <div id="user_score"></div>
+            </div>
+        </div>
+    </div>
 
 
     <div class="container">
         <div class="row">
-            <div class="col-4">
-                <h3 class="win">Wins</h3>
-                <div class="win" id = "win">.</div>
-            </div>
-            <div class="col-4">
-                <h3 class="lose">Losses</h3>
-                <div class="lose" id= "lose">.</div>
-            </div>
+                <div class="col-3" id="wins">
+                        <h3>Wins</h3>
+                        <div id="win"></div>
+                </div>
+                <div class="col-3" id="losses">
+                        <h3>Losses</h3>
+                        <div id="lose"></div>
+                </div>
+
         </div>
     </div>
 

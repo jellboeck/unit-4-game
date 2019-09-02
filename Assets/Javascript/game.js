@@ -11,6 +11,10 @@ var crystal2 = [];
 var crystal3 = [];
 var crystal4 = [];
 
+$("#win").html(win);
+$("#lose").html(lose);
+$("#user_score").html(userScore);
+
 
 function gameReset() {
 
@@ -24,9 +28,11 @@ function gameReset() {
     crystal2 = [];
     crystal3 = [];
     crystal4 = [];
+    $("#message").text("");
+   
 
     //choose the random number between 19 and 120
-    ranNumber = Math.floor(Math.random() * 120) + 19;
+    ranNumber = Math.floor(Math.random() * 120) + 20;
     $("#ran_number").text(ranNumber)
     console.log(ranNumber)
 
@@ -34,7 +40,7 @@ function gameReset() {
     crystal1 = Math.floor(Math.random() * 10) + 5;
     console.log(crystal1)
 
-    crystal2 = Math.floor(Math.random() * 6) + 1;
+    crystal2 = Math.floor(Math.random() * 8) + 1;
     console.log(crystal2)
 
     crystal3 = Math.floor(Math.random() * 3) + 1;
@@ -46,19 +52,22 @@ function gameReset() {
 
 }
 
+
+
+$(".btn-lg").on("click", function () {
 gameReset()
-
-
-$("#crystal_1").on("click", function(){
-    crystal1 = parseInt(crystal1);
-    userScore += crystal1;
-    $("#user_score").html(userScore);
-    checkWin ()
 
 })
 
-$("#crystal_2").on("click", function(){
-    crystal2 = parseInt(crystal2);
+
+$("#crystal_1").on("click", function () {
+    userScore += crystal1;
+    $("#user_score").html(userScore);
+    checkWin()
+
+})
+
+$("#crystal_2").on("click", function () {
     userScore += crystal2;
     $("#user_score").html(userScore);
     checkWin()
@@ -66,8 +75,7 @@ $("#crystal_2").on("click", function(){
 })
 
 
-$("#crystal_3").on("click", function(){
-    crystal3 = parseInt(crystal3);
+$("#crystal_3").on("click", function () {
     userScore += crystal3;
     $("#user_score").html(userScore);
     checkWin()
@@ -75,30 +83,30 @@ $("#crystal_3").on("click", function(){
 })
 
 
-$("#crystal_4").on("click", function(){
-    crystal4 = parseInt(crystal4);
+$("#crystal_4").on("click", function () {
     userScore = userScore + crystal4;
     $("#user_score").html(userScore);
     checkWin()
 
 })
 
-function checkWin () {
+function checkWin() {
 
-if (userScore === ranNumber){
-    alert("You Win");
-    console.log(userScore);
-    $("#win").text(win);
-    gameReset()
-}
+    if (userScore === ranNumber) {
+        win++;
+        $("#message").text("Wow! You did it! Congratulations!");
+        console.log(userScore);
+        $("#win").text(win);
+  
+    }
 
-else if (userScore > ranNumber){
-    alert("You Lose!");
-    console.log(userScore);
-    lose++;
-    $("#lose").text(lose);
-    gameReset()
+    else if (userScore > ranNumber) {
+        $("#message").text("Oh no! You went over! Better luck next time");
+        console.log(userScore);
+        lose++;
+        $("#lose").text(lose);
+       
 
-}
+    }
 
 }
