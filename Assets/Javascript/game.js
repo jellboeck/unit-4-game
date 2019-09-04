@@ -29,24 +29,24 @@ function gameReset() {
     crystal3 = [];
     crystal4 = [];
     $("#message").text("");
-   
+
 
     //choose the random number between 19 and 120
-    ranNumber = Math.floor(Math.random() * 120) + 20;
+    ranNumber = Math.floor(Math.random() * (120 - 19)) + 19;
     $("#ran_number").text(ranNumber)
     console.log(ranNumber)
 
     //choose the values of the crystals
-    crystal1 = Math.floor(Math.random() * 10) + 5;
+    crystal1 = Math.floor(Math.random() * (10 - 5)) + 5;
     console.log(crystal1)
 
-    crystal2 = Math.floor(Math.random() * 8) + 1;
+    crystal2 = Math.floor(Math.random() * (8 - 1)) + 1;
     console.log(crystal2)
 
-    crystal3 = Math.floor(Math.random() * 3) + 1;
+    crystal3 = Math.floor(Math.random() * (3 - 1)) + 1;
     console.log(crystal3)
 
-    crystal4 = Math.floor(Math.random() * 9) + 3;
+    crystal4 = Math.floor(Math.random() * (9 - 3)) + 3;
     console.log(crystal4)
 
 
@@ -55,7 +55,7 @@ function gameReset() {
 
 
 $(".btn-lg").on("click", function () {
-gameReset()
+    gameReset()
 
 })
 
@@ -65,12 +65,14 @@ $("#crystal_1").on("click", function () {
     $("#user_score").html(userScore);
     checkWin()
 
+
 })
 
 $("#crystal_2").on("click", function () {
     userScore += crystal2;
     $("#user_score").html(userScore);
-    checkWin()
+    checkWin ()
+
 
 })
 
@@ -80,6 +82,7 @@ $("#crystal_3").on("click", function () {
     $("#user_score").html(userScore);
     checkWin()
 
+
 })
 
 
@@ -88,7 +91,9 @@ $("#crystal_4").on("click", function () {
     $("#user_score").html(userScore);
     checkWin()
 
+
 })
+
 
 function checkWin() {
 
@@ -97,7 +102,7 @@ function checkWin() {
         $("#message").text("Wow! You did it! Congratulations!");
         console.log(userScore);
         $("#win").text(win);
-  
+
     }
 
     else if (userScore > ranNumber) {
@@ -105,8 +110,11 @@ function checkWin() {
         console.log(userScore);
         lose++;
         $("#lose").text(lose);
-       
+
 
     }
 
+
+
 }
+
