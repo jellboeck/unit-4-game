@@ -4,7 +4,7 @@ var win = 0;
 var lose = 0;
 var ranNumber = [];
 var userScore = 0;
-gameOver= false;
+gameOver = false;
 
 //Crystal Variables
 var crystal1 = [];
@@ -73,13 +73,13 @@ $("#crystal_4").on("click", function () {
 })
 
 //Checks to see is the game is over, if not, then the the users click value is added to the userscore
-//then we check for a win or loss 
+//then we check for a win or loss check
 function checkWin() {
 
     if (!gameOver) {
         userScore = userScore + value;
         $("#user_score").html(userScore);
-        
+
 
         if (userScore === ranNumber) {
             win++;
